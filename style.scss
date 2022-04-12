@@ -21,79 +21,6 @@ $darker-blue: #062653;
   grid-auto-rows: minmax(25px, auto);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.1;
-}
-
-a {
-  text-decoration: none;
-}
-
-.icon {
-  height: 30px;
-}
-
-li {
-  list-style: none;
-}
-
-.flex-center {
-  @include flex(center);
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  // background-color: rgb(169, 204, 255);
-  scroll-behavior: smooth;
-}
-
-.container {
-  max-width: 1050px;
-  width: 90%;
-  margin: auto;
-}
-
-nav {
-  width: 100%;
-  .nav-container {
-    .logo {
-      @include flex(center);
-      margin: 0 auto;
-      transform: translatey(10px);
-      img {
-        height: 30px;
-      }
-    }
-  }
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 62px;
-}
-
-nav .nav-container a {
-  color: white;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-}
-
-.nav-container {
-  display: block;
-  position: relative;
-  height: 60px;
-}
-
 .nav-container .checkbox {
   position: absolute;
   display: block;
@@ -141,37 +68,6 @@ nav .nav-container a {
   transition: transform 0.4s ease-in-out;
 }
 
-nav .menu-items {
-  padding-top: 120px;
-  // box-shadow: inset 0 0 2000px rgba(78, 117, 224, 0.9);
-  background-color: rgb(0, 39, 99);
-  height: 100vh;
-  width: 100%;
-  transform: translateX(-150%);
-  display: flex;
-  flex-direction: column;
-  margin-left: -40px;
-  align-items: center;
-  padding-left: 50px;
-  transition: transform 0.5s ease-in-out;
-  text-align: center;
-}
-
-nav .menu-items li {
-  margin-bottom: 1.75rem;
-  font-weight: 500;
-  a {
-    color: black;
-  }
-}
-
-.logo {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
-}
-
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
   transform: translateX(0);
 }
@@ -195,31 +91,6 @@ nav .menu-items li {
   display: none;
 }
 
-.link {
-  position: relative;
-  padding-bottom: 0.25em;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(66, 98, 202);
-    border-radius: 5px;
-
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 250ms ease-in;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-}
-
 .sect1 {
   padding: $outer-padding;
   background-size: cover;
@@ -228,6 +99,7 @@ nav .menu-items li {
   align-items: center;
   justify-content: center;
   .button {
+    cursor: pointer;
     margin: 3em 0 2em 0;
     font-size: 1.25rem;
     padding: 0.75em 1.5em;
@@ -331,6 +203,9 @@ nav .menu-items li {
       text-align: center;
       border-radius: 5px;
       color: white;
+      a {
+        color: white;
+      }
     }
   }
 }
@@ -369,27 +244,6 @@ nav .menu-items li {
         }
       }
     }
-    // .tender-part {
-    //   @include flex(center);
-    //   overflow-x: scroll;
-    //   overflow-y: hidden;
-    //   .tender-content {
-    //     @include flex(start);
-    //     padding: 0 1em;
-    //     width: 20%;
-    //     text-align: center;
-    //     li {
-    //       padding: 0 0.5em;
-    //       width: 500px;
-    //       text-align: center;
-    //       margin-inline: auto;
-    //     }
-    //   }
-    //   .tender-content + .tender-content {
-    //     margin-left: 5em;
-    //   }
-    // }
-    // transition: color 0ms 400ms;
   }
 }
 
@@ -447,17 +301,6 @@ nav .menu-items li {
 }
 
 @media (min-width: 800px) {
-  .nav-container .checkbox,
-  .nav-container .hamburger-lines {
-    display: none;
-  }
-
-  .nav-container {
-    max-width: 2000px;
-    width: 100%;
-    padding: 0 2.5rem;
-  }
-
   .sect1 {
     @include flex(space-between);
     flex-direction: row;
@@ -507,18 +350,19 @@ nav .menu-items li {
       width: 100%;
       @include flex(center);
       .header:nth-child(1) {
-        margin-left: 2em;
-      }
-      .header:nth-child(2) {
-        margin-left: 7.5em;
+        margin-right: 10.5em;
       }
       .header:nth-child(3) {
-        margin-left: 7em;
-        margin-right: 1em;
+        margin-left: 12em;
+        margin-right: 4em;
       }
     }
     .tender-part {
       width: 100%;
+      a {
+        color: black;
+        text-decoration: underline;
+      }
       // overflow: hidden;
       height: 90%;
       overflow-y: scroll;
@@ -534,16 +378,6 @@ nav .menu-items li {
         }
       }
     }
-  }
-
-  nav .menu-items {
-    transform: translateX(0);
-    height: 6rem;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    background-color: transparent;
   }
 
   .sec34 {

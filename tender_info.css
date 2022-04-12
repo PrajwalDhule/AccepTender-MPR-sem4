@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@100;300;400&family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sect1 {
+  padding: 0 30px;
+}
+
+.sect1 .one {
+  width: 60vw;
+}
+
+.sect1 .two,
+.sect1 .three {
+  margin-top: 10px;
+  width: 50vw;
+}
+
+.sect2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 30px;
+  margin-top: 20px;
+}
+
+.one,
+.two,
+.three {
+  border: 1.5px solid black;
+}
+
+.one .info,
+.two .info,
+.three .info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.one .info .info-title,
+.two .info .info-title,
+.three .info .info-title {
+  padding: 5px;
+  padding-bottom: 7.5px;
+  background-origin: padding-box;
+  background-color: #abc6fa;
+  width: 250px;
+}
+
+.one .info .info-content,
+.two .info .info-content,
+.three .info .info-content {
+  padding: 5px;
+  padding-left: 3px;
+}
+/*# sourceMappingURL=tender_info.css.map */
