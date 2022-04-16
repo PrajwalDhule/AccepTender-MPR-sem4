@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 1rem;
+  padding: 0rem;
   color: #212d31;
   font-family: "Roboto", sans-serif;
 }
@@ -14,6 +14,7 @@ body {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   padding: 1em;
 }
 
@@ -35,7 +36,7 @@ div.form {
   content: "";
   display: block;
   width: 10%;
-  padding-top: 10px;
+  padding-top: 2px;
   border-bottom: 3px solid #ec1c24;
 }
 
@@ -165,4 +166,8 @@ button:focus,
 }
 .error {
   color: #ec1c24;
+}
+.form {
+  margin-top: 0;
+  padding-top: 5px;
 }

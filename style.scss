@@ -370,11 +370,16 @@ $darker-blue: #062653;
         width: 100%;
         @include flex(space-around);
         li {
+          max-width: 24%;
           margin-top: 1.5em;
           text-align: center;
         }
+        li:nth-child(1) {
+          margin-left: -2.5em;
+        }
         li:nth-child(2) {
-          margin-left: 1em;
+          margin-left: -4em;
+          margin-right: 2em;
         }
       }
     }

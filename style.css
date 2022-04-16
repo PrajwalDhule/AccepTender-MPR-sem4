@@ -527,11 +527,16 @@
             align-items: center;
   }
   .tender-list .tender-part .tender-content li {
+    max-width: 24%;
     margin-top: 1.5em;
     text-align: center;
   }
+  .tender-list .tender-part .tender-content li:nth-child(1) {
+    margin-left: -2.5em;
+  }
   .tender-list .tender-part .tender-content li:nth-child(2) {
-    margin-left: 1em;
+    margin-left: -4em;
+    margin-right: 2em;
   }
   .sec34 {
     display: -webkit-box;

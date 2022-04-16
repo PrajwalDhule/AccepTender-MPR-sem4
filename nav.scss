@@ -21,6 +21,13 @@ $darker-blue: #062653;
   grid-auto-rows: minmax(25px, auto);
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 nav {
   width: 100%;
   .nav-container {
