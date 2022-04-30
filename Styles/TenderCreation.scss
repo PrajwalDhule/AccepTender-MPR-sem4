@@ -27,6 +27,7 @@ h2 {
 }
 
 .sect1 {
+  margin-top: 30px;
   .one {
     width: 60vw;
   }
@@ -57,11 +58,6 @@ h2 {
     width: 100%;
     @include flex(flex-start);
     background-color: rgb(171, 198, 250);
-    .long-content {
-      p {
-        height: 75px;
-      }
-    }
     .info-title {
       padding: 5px;
       padding-bottom: 7.5px;
@@ -71,6 +67,23 @@ h2 {
     .info-content {
       padding: 5px;
       padding-left: 3px;
+      width: 100%;
+      input {
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+      }
+      textarea {
+        padding: 5px;
+      }
+      .text2 {
+        height: 75px;
+        width: 100%;
+        padding: 5px;
+      }
+      .file1 {
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -78,14 +91,12 @@ h2 {
 button {
   padding: 1em 2.5em;
   background-color: rgb(71, 97, 228);
+  color: white;
   border: 1px solid black;
   border-radius: 10px;
   transform: translateY(50px);
   cursor: pointer;
   font-weight: bolder;
-  a {
-    color: white;
-  }
 }
 
 button:hover {
