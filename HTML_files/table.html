@@ -17,25 +17,27 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="table.css" />
-    <script src="table.js"></script>
+    <link rel="stylesheet" href="../Styles/table.css" />
+    <script src="../Scripts/table.js"></script>
     <title>table</title>
 
-    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="../Styles/nav.css" />
   </head>
   <body>
     <nav>
       <div class="container nav-container">
         <div class="logo">
           <a href="#"
-            ><img src="./images/documents2.png" alt="" class="icon"
+            ><img src="../images/documents2.png" alt="" class="icon"
           /></a>
         </div>
         <ul class="menu-items">
-          <li><a class="link" href="index.html">Home</a></li>
+          <li><a class="link" href="../HTML_files/index.html">Home</a></li>
           <li><a class="link" href="#">Guide</a></li>
-          <li><a class="link" href="table.html">Tenders</a></li>
-          <li><a class="link" href="contact.html">Contact us</a></li>
+          <li><a class="link" href="../HTML_files/table.html">Tenders</a></li>
+          <li>
+            <a class="link" href="../HTML_files/contact.html">Contact us</a>
+          </li>
           <li><a class="link" href="#">Login/Sign up</a></li>
           <li><a class="link" href="#">MyProfile</a></li>
         </ul>
@@ -62,10 +64,10 @@
         <tr style="cursor: pointer">
           <th onclick="sortTable(0);" class="th-sm">TenderID</th>
           <th onclick="sortTable(1);" class="th-sm">Reference ID</th>
-          <th onclick="sortTable(2);" class="th-sm">Start date</th>
-          <th onclick="sortTable(3);" class="th-sm">Close date</th>
-          <th onclick="sortTable(4);" class="th-sm">Bid amount</th>
-          <th onclick="sortTable(5);" class="th-sm">Experience</th>
+          <th onclick="sortTable(3);" class="th-sm">Start date</th>
+          <th onclick="sortTable(4);" class="th-sm">Close date</th>
+          <th onclick="sortTable(5);" class="th-sm">Bid amount</th>
+          <th onclick="sortTable(6);" class="th-sm">Experience</th>
         </tr>
       </thead>
       <tbody>
