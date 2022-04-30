@@ -21,6 +21,10 @@ $darker-blue: #062653;
   grid-auto-rows: minmax(25px, auto);
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   &:hover {

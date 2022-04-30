@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/StaticStyle.css">
+    <link rel="stylesheet" href="../Styles/nav.css">
     <title>Responsive Registration Form</title>
 </head>
 <body>
-    <div class="container">
+    <nav>
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="#"
+            ><img src="../images/documents2.png" alt="" class="icon"
+          /></a>
+        </div>
+        <ul class="menu-items">
+          <li><a class="link" href="../HTML_files/index.html">Home</a></li>
+          <li><a class="link" href="#">Guide</a></li>
+          <li><a class="link" href="../HTML_files/table.html">Tenders</a></li>
+          <li>
+            <a class="link" href="../HTML_files/contact.html">Contact us</a>
+          </li>
+          <li><a class="link" href="#">Login/Sign up</a></li>
+          <li><a class="link" href="#">MyProfile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container2">
         <div class="title"></div>
         <div class="subtitle">Company Details</div>
         <form action="#">
@@ -56,10 +76,10 @@
 
                 
             <div class="button">
-                <input type="submit" value="Back">
+                <a href="../HTML_files/tender_info.html"><input type="button" value="Back"></a> 
             </div>
             <div class="button">
-                <Button><a href="../HTML_files/f2.html">Next</a></Button>
+                <a href="../HTML_files/f2.html"><input type="button" value="Next"></a>
             </div>
 
         </form>
