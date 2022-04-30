@@ -1,0 +1,90 @@
+.sect1 {
+  background-color: #b4d6ff;
+  border-radius: 15px;
+  padding: 30px 30px 30px 50px;
+  margin: 20px 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40vw 40vw;
+      grid-template-columns: 40vw 40vw;
+  gap: 25px;
+}
+
+.sect1 .part1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.sect1 .part1 .acceptfile {
+  position: absolute;
+  z-index: 1;
+}
+
+.sect1 .part1 .image {
+  z-index: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sect1 .part1 .image img {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.sect1 .part3 {
+  margin-left: 50px;
+}
+
+.sect1 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sect1 .info p {
+  margin-top: 1.5em;
+}
+
+.sect1 .info .content {
+  margin-left: 10px;
+}
+
+.sect2 {
+  margin: 75px 100px;
+}
+
+.sect2 .title {
+  font-size: 1.5rem;
+}
+
+.sect2 .tender {
+  margin-top: 20px;
+  font-size: 1.25rem;
+}
+/*# sourceMappingURL=BidderProfile.css.map */
