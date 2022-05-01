@@ -13,6 +13,10 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: 0.5em;
 }
 
+a {
+  color: black;
+}
+
 .table {
   margin: 1em 3em;
   width: calc(100vw - 6em);

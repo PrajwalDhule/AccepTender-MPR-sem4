@@ -28,8 +28,8 @@
     <section class="sect3">
       <p>Filters:</p>
       <ul class="filters">
-        <li class="filter-items"><a href="#">by experience</a></li>
-        <li class="filter-items"><a href="#">by cost</a></li>
+        <li class="filter-items"><a href="#" onclick="sortByExp()">by experience</a></li>
+        <li class="filter-items"><a href="#" onclick="sortByCost()">by cost</a></li>
         <li class="filter-items"><a href="#">by organization</a></li>
       </ul>
     </section>
@@ -47,16 +47,37 @@
           <th onclick="sortTable(4);" class="th-sm">bid amount</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="tableBody">
         {{# each Biddilist}}
-        <tr>
-          <td>{{this.companyname}}</td>
-          <td>{{this.registrationnumber}}</td>
-          <td>{{this.eYear}}</td>
-          <td>{{this.bidAmount}}</td>
+        <tr id="table">
+          <td class="col1"><a href="/BidderProfile">{{this.companyname}}</a></td>
+          <td class="col2">{{this.registrationnumber}}</td>
+          <td class="col3">{{this.eYear}}</td>
+          <td class="col4">{{this.bidAmount}}</td>
         </tr>
           {{/each}}
         
     </table>
   </body>
+  <script>
+    "use strict";
+    function sortByCost(){
+        const tableBody = document.getElementById("tableBody");
+        const rows = tableBody.rows;
+        
+        const sortedRows = [...rows].sort((a,b) =>{
+          return parseInt(a.children[3].innerHTML) < parseInt(b.children[3].innerHTML) ? -1 : 1;
+        });
+        tableBody.innerHTML =[...sortedRows].map(row => row.outerHTML).join("");
+    }
+    function sortByExp(){
+        const tableBody = document.getElementById("tableBody");
+        const rows = tableBody.rows;
+        
+        const sortedRows = [...rows].sort((a,b) =>{
+          return parseInt(a.children[2].innerHTML) < parseInt(b.children[2].innerHTML) ? -1 : 1;
+        });
+        tableBody.innerHTML =[...sortedRows].map(row => row.outerHTML).join("");
+    }
+  </script>
 </html>

@@ -34,6 +34,10 @@ $darker-blue: #062653;
   grid-auto-rows: minmax(25px, auto);
 }
 
+a {
+  color: black;
+}
+
 .table {
   margin: 1em 3em;
   width: calc(100vw - 6em);
