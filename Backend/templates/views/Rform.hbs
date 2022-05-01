@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,7 +21,7 @@
               placeholder="Enter Company Name"
               required
             />
-            
+
           </div>
           <div class="input-box">
             <label for="details">Registration Number</label>
@@ -74,7 +73,13 @@
           </div>
           <div class="input-box">
             <label for="details">Postal Code</label>
-            <input type="text" name="postalcode" id="" placeholder="" required />
+            <input
+              type="text"
+              name="postalcode"
+              id=""
+              placeholder=""
+              required
+            />
           </div>
           <div class="input-box">
             <label for="details">TAN/PAN Number</label>
@@ -125,7 +130,13 @@
           </div>
           <div class="input-box">
             <label for="details"> Password</label>
-            <input type="text" name="password" id="" placeholder="Password" required />
+            <input
+              type="text"
+              name="password"
+              id=""
+              placeholder="Password"
+              required
+            />
           </div>
           <div class="input-box">
             <label for="details">Confirm Password</label>
@@ -160,9 +171,16 @@
         </div>
 
         <div class="button">
-          <input type="submit" value="Register" />
+          <a href="/index"><input
+              type="submit"
+              value="Register"
+              onclick="registered()"
+            /></a>
         </div>
       </form>
     </div>
   </body>
+  <script>
+    "use strict"; registered = () => { alert("Registration Successful!"); }
+  </script>
 </html>

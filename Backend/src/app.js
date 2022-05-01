@@ -5,6 +5,8 @@ const hbs = require("hbs");
 require("./db/conn");
 const Login = require("./models/login");
 const Register = require("./models/register");
+const Enroll = require("./models/enrollment");
+const tc = require("./models/TenderCreation");
 
 const port = process.env.PORT || 8000;
 
@@ -34,13 +36,21 @@ app.get("/contact", (req, res) => {
 app.get("/f2", (req, res) => {
   res.render("f2");
 });
+app.post("/f2", async (req, res) => {
+  try {
+    const enrollDetails = new Enroll(req.body);
+    await enrollDetails.save();
+    res.status(201).send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
 app.get("/LoginF", (req, res) => {
-
-   res.render("LoginF")
-} )
+  res.render("LoginF");
+});
 app.get("/register", (req, res) => {
-   res.render("Rform");
-} )
+  res.render("Rform");
+});
 app.post("/register", async (req, res) => {
    try{
       const RegisterDetails = new Register(
@@ -73,15 +83,15 @@ app.get("/BidderProfile", async (req, res) => {
   res.render("BidderProfile", {getregister});
 });
 
-
 // sending data of user to database
 app.post("/LoginF", async (req, res) => {
   try {
     const LoginDetails = new Login({
-        username : req.body.username,
-        password : req.body.password
-    })       
-   
+      username: req.body.username,
+      password: req.body.password,
+      value: req.body.login,
+    });
+
     const loggedin = await LoginDetails.save();
     res.status(201).render("index");
   } catch (error) {
@@ -99,6 +109,15 @@ app.get("/tenderinfo", (req, res) => {
 });
 app.get("/TenderCreation", (req, res) => {
   res.render("TenderCreation");
+});
+app.post("/TenderCreation", async (req, res) => {
+  try {
+    const tCreation = new tc(req.body);
+    await tCreation.save();
+    res.status(201).send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 
 app.listen(port, () => {
