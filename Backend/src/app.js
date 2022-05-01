@@ -7,6 +7,7 @@ const Login = require("./models/login");
 const Register = require("./models/register");
 const Enroll = require("./models/enrollment");
 const tc = require("./models/TenderCreation");
+const Apply = require("./models/apply");
 
 const port = process.env.PORT || 8000;
 
@@ -117,6 +118,18 @@ app.post("/TenderCreation", async (req, res) => {
   try {
     const tCreation = new tc(req.body);
     await tCreation.save();
+    res.status(201).send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+app.get("/StaticR", (req, res) => {
+  res.render("apply");
+});
+app.post("/StaticR", async (req, res) => {
+  try {
+    const application = new Apply(req.body);
+    await application.save();
     res.status(201).send(req.body);
   } catch (error) {
     res.status(400).send(error);

@@ -13,15 +13,15 @@
     <div class="container2">
         <div class="title"></div>
         <div class="subtitle">Company Details</div>
-        <form action="#">
+        <form action="/StaticR" method="post">
             <div class="user-details">
                 <div class="input-box">
                     <label for="details">Company Name</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="" name="companyname" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Registration Number</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="" name="registrationnumber" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Email</label>
@@ -53,10 +53,13 @@
                 </div>
                 <div class="input-box">
                     <label for="details">Establishment Year</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="" name="eYear" readonly>
+                </div>
+                <div class="input-box">
+                    <label for="details">Confirm BID Amount</label>
+                    <input type="text" name="bidAmount">
                 </div>
 
-                
             <div class="button">
                 <a href="/tenderinfo"><input type="button" value="Back"></a> 
             </div>
