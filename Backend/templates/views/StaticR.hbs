@@ -17,43 +17,43 @@
             <div class="user-details">
                 <div class="input-box">
                     <label for="details">Company Name</label>
-                    <input type="text" value="" name="companyname" readonly>
+                    <input type="text" value="{{reg.companyname}}" name="companyname" >
                 </div>
                 <div class="input-box">
                     <label for="details">Registration Number</label>
-                    <input type="text" value="" name="registrationnumber" readonly>
+                    <input type="text" value="{{reg.registrationnumber}}" name="registrationnumber" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Email</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.email}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Phone Number</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.phonenumber}}" readonly>
                 </div>
                 <div class="input-box Address">
                     <label for="details">Registered Address</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.registeredaddress}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">City</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.city}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">State</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.state}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Postal Code</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.postalcode}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">TAN/PAN Number</label>
-                    <input type="text" value="" readonly>
+                    <input type="text" value="{{reg.postalcode}}" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Establishment Year</label>
-                    <input type="text" value="" name="eYear" readonly>
+                    <input type="text" value="{{reg.establishmentyear}}" name="eYear" readonly>
                 </div>
                 <div class="input-box">
                     <label for="details">Confirm BID Amount</label>
@@ -61,10 +61,10 @@
                 </div>
 
             <div class="button">
-                <a href="/tenderinfo"><input type="button" value="Back"></a> 
+                <a href="/tenderinfo"><input type="button" value="Back" name="button"></a> 
             </div>
             <div class="button">
-                <a href="/f2"><input type="button" value="Next"></a>
+                <a href="/f2"><input type="submit" value="Next" name="button"></a>
             </div>
 
         </form>

@@ -20,6 +20,8 @@ app.set("view engine", "hbs");
 app.set("views", templates_path);
 hbs.registerPartials(partials_path);
 
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -51,32 +53,35 @@ app.get("/register", (req, res) => {
   res.render("Rform");
 });
 app.post("/register", async (req, res) => {
-  try {
-    const RegisterDetails = new Register({
-      companyname: req.body.companyname,
-      registrationnumber: req.body.registrationnumber,
-      email: req.body.email,
-      phonenumber: req.body.phonenumber,
-      registeredaddress: req.body.registeredaddress,
-      city: req.body.city,
-      state: req.body.state,
-      dob: req.body.dob,
-      postalcode: req.body.postalcode,
-      contactname: req.body.contactname,
-      establishmentyear: req.body.establishmentyear,
-      designation: req.body.designation,
-      password: req.body.password,
-      confirmpassword: req.body.confirmpassword,
-    });
-    const registered = await RegisterDetails.save();
-    res.status(201).send(req.body);
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
+   try{
+      const RegisterDetails = new Register(
+            req.body
+         // companyname : req.body.companyname, 
+         // registrationnumber : req.body. registrationnumber, 
+         // email : req.body. email, 
+         // phonenumber : req.body.phonenumber, 
+         // registeredaddress : req.body. registeredaddress, 
+         // city : req.body. city, 
+         // state : req.body. state, 
+         // dob : req.body.dob,
+         // postalcode : req.body. postalcode, 
+         // contactname : req.body.contactname, 
+         // establishmentyear : req.body. establishmentyear, 
+         // designation : req.body. designation, 
+         // password : req.body. password, 
+         // confirmpassword : req.body. confirmpassword,  
+      )
+      const registered = await RegisterDetails.save();
+      res.status(201).send(req.body);
+   }catch(error){
+      res.status(400).send(error);
+   }
+   
+} )
 
-app.get("/BidderProfile", (req, res) => {
-  res.render("BidderProfile");
+app.get("/BidderProfile", async (req, res) => {
+   const getregister = await Register.find({});
+  res.render("BidderProfile", {getregister});
 });
 
 // sending data of user to database
@@ -94,9 +99,6 @@ app.post("/LoginF", async (req, res) => {
     res.status(400).send(error);
   }
 });
-app.get("/StaticR", (req, res) => {
-  res.render("StaticR");
-});
 app.get("/table", (req, res) => {
   res.render("table");
 });
@@ -106,8 +108,10 @@ app.get("/tenderinfo", (req, res) => {
 app.get("/TenderCreation", (req, res) => {
   res.render("TenderCreation");
 });
-app.get("/BidderList", (req, res) => {
-  res.render("BidderList");
+app.get("/BidderList", async (req, res) => {
+   const Biddilist = await Apply.find();
+   console.log(Biddilist)
+  res.render("BidderList", {Biddilist});
 });
 app.post("/TenderCreation", async (req, res) => {
   try {
@@ -118,14 +122,19 @@ app.post("/TenderCreation", async (req, res) => {
     res.status(400).send(error);
   }
 });
-app.get("/StaticR", (req, res) => {
-  res.render("apply");
+app.get("/StaticR", async (req, res) => {
+   const Registrationdetails = await Register.find({companyname : "Tata"});
+   const reg  = Registrationdetails[0];
+   
+    res.render("StaticR", {reg})
+  
 });
-app.post("/StaticR", async (req, res) => {
+app.post("/StaticR",  async(req, res) => {
   try {
     const application = new Apply(req.body);
-    await application.save();
-    res.status(201).send(req.body);
+     await application.save();
+    console.log(req.body);
+    res.status(201).render("f2");
   } catch (error) {
     res.status(400).send(error);
   }

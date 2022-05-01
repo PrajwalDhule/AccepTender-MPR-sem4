@@ -11,7 +11,9 @@
   <body>
       {{>navbar}}
     <section class="sect1">
+     
       <div class="part1 pfp">
+     
         <p class="acceptfile">
           <input
             type="file"
@@ -27,10 +29,13 @@
         </p>
         <p class="image"><img id="output" src="../images/person1.png" /></p>
       </div>
+      
       <div class="part2">
+        
         <div class="info">
           <p class="title">Company Name:</p>
-          <p class="content">Lorem, ipsum.</p>
+          <p class="content">{{this.companyname}}</p>
+          <script>console.log(this.companyname)</script>
         </div>
         <div class="info">
           <p class="title">Registration no:</p>
@@ -48,6 +53,7 @@
           <p class="title">Registered address:</p>
           <p class="content">Lorem, ipsum.</p>
         </div>
+        
       </div>
       <div class="part3">
         <div class="info">
@@ -93,6 +99,7 @@
           <p class="content">Male</p>
         </div>
       </div>
+    
     </section>
     <section class="sect2">
       <p class="title">Applied Tenders:</p>
