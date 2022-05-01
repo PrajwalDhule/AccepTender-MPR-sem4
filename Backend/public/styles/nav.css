@@ -27,12 +27,11 @@ nav .nav-container .logo {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  -webkit-transform: translatey(10px);
-          transform: translatey(10px);
+  padding-top: -20px;
 }
 
 nav .nav-container .logo img {
-  height: 30px;
+  height: 50px;
 }
 
 .nav-container {
