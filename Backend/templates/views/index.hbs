@@ -173,7 +173,7 @@
       oDate: "16-05-2022",
       cDate: "17-05-2022"
     }
-    const sect = document.querySelector('section');
+    const sect = document.querySelector('tender-part');
 
     const div = document.createElement('div');
     div.classList.add("tender-content");
@@ -183,16 +183,18 @@
     //           <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
     //           <li>21-03-2022</li>
     //           <li>21-03-2025</li>';
+    div.innerHTML = `${obj.title}`;
+    console.log(div);
 
+    sect.appendChild(div);
 
-
-                <div class="tender-content">
-              <li>
-                <a href="#">Upgradation and Replacement of existing lifts</a>
-              </li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
+            //     <div class="tender-content">
+            //   <li>
+            //     <a href="#">Upgradation and Replacement of existing lifts</a>
+            //   </li>
+            //   <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
+            //   <li>21-03-2022</li>
+            //   <li>21-03-2025</li>
+            // </div>
   </script>
 </html>
