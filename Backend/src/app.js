@@ -99,9 +99,6 @@ app.post("/LoginF", async (req, res) => {
     res.status(400).send(error);
   }
 });
-app.get("/StaticR", (req, res) => {
-  res.render("StaticR");
-});
 app.get("/table", (req, res) => {
   res.render("table");
 });
@@ -111,8 +108,10 @@ app.get("/tenderinfo", (req, res) => {
 app.get("/TenderCreation", (req, res) => {
   res.render("TenderCreation");
 });
-app.get("/BidderList", (req, res) => {
-  res.render("BidderList");
+app.get("/BidderList", async (req, res) => {
+   const Biddilist = await Apply.find();
+   console.log(Biddilist)
+  res.render("BidderList", {Biddilist});
 });
 app.post("/TenderCreation", async (req, res) => {
   try {
@@ -123,14 +122,19 @@ app.post("/TenderCreation", async (req, res) => {
     res.status(400).send(error);
   }
 });
-app.get("/StaticR", (req, res) => {
-  res.render("apply");
+app.get("/StaticR", async (req, res) => {
+   const Registrationdetails = await Register.find({companyname : "Tata"});
+   const reg  = Registrationdetails[0];
+   
+    res.render("StaticR", {reg})
+  
 });
-app.post("/StaticR", async (req, res) => {
+app.post("/StaticR",  async(req, res) => {
   try {
     const application = new Apply(req.body);
-    await application.save();
-    res.status(201).send(req.body);
+     await application.save();
+    console.log(req.body);
+    res.status(201).render("f2");
   } catch (error) {
     res.status(400).send(error);
   }

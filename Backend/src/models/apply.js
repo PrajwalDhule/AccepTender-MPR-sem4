@@ -4,13 +4,14 @@ const apply = new mongoose.Schema({
   companyname: {
     type: String,
     required: true,
+    unique : true
   },
   registrationnumber: {
     type: String,
     required: true,
   },
   eYear: {
-    type: Date,
+    type: Number,
     required: true,
   },
   bidAmount: {
