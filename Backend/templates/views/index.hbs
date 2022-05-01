@@ -169,32 +169,27 @@
     // });
     let obj = {
       title: "Destroy TSEC building",
-      no: 123,
+      no: "Proc.4(2)/DK/ROTI/HTA/03/2022",
       oDate: "16-05-2022",
-      cDate: "17-05-2022"
+      cDate: "17-05-2022",
+      link: "/tenderinfo"
     }
-    const sect = document.querySelector('tender-part');
+    const art= document.querySelector('.tender-part');
 
     const div = document.createElement('div');
     div.classList.add("tender-content");
-    // div.innerHTML = '<li>
-    //             <a href="#">Upgradation and Replacement of existing lifts</a>
-    //           </li>
-    //           <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-    //           <li>21-03-2022</li>
-    //           <li>21-03-2025</li>';
-    div.innerHTML = `${obj.title}`;
-    console.log(div);
 
-    sect.appendChild(div);
+    div.innerHTML = `<li>
+                <a href="${obj.link}">${obj.title}</a>
+              </li>
+              <li>${obj.no}</li>
+              <li>${obj.oDate}</li>
+              <li>${obj.cDate}</li>`;
+    // console.log(div);
+    // console.log(art);
 
-            //     <div class="tender-content">
-            //   <li>
-            //     <a href="#">Upgradation and Replacement of existing lifts</a>
-            //   </li>
-            //   <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-            //   <li>21-03-2022</li>
-            //   <li>21-03-2025</li>
-            // </div>
+    art.appendChild(div);
+    art.insertBefore(div, art.firstChild);
+
   </script>
 </html>

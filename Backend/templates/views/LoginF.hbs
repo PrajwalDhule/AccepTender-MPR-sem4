@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title> Login Form | </title>
-    <link rel="stylesheet" href="../Styles/LoginF.css">
+    <link rel="stylesheet" href="../Styles/LoginF.css" />
   </head>
   <body>
     <div class="center">
@@ -19,29 +17,42 @@
       </div>
         </div> -->
         <div class="txt_field">
-          <input type="text" required name="username">
+          <input type="text" required name="username" />
           <span></span>
           <label>Username</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password">
+          <input type="password" required name="password" />
           <span></span>
           <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
         <div class="submitbtn">
           <div class="bidder">
-        <input type="submit" value="Login as bidder"  >
-      </div>
-      <div class="admin">
-        <input type="submit" value="Login as Admin" >
-      </div>
-    </div>
+            <input
+              type="submit"
+              value="Login as bidder"
+              onclick="logged()"
+              name="login"
+            />
+          </div>
+          <div class="admin">
+            <input
+              type="submit"
+              value="Login as Admin"
+              onclick="logged()"
+              name="login"
+            />
+          </div>
+        </div>
         <div class="signup_link">
-          New Here? <a href="#">Signup</a>
+          New Here?
+          <a href="/Register">Signup</a>
         </div>
       </form>
     </div>
-
   </body>
+  <script>
+    "use strict"; function logged(){ alert("Login Successful!"); }
+  </script>
 </html>
