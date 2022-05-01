@@ -13,23 +13,27 @@
     <div class="container2">
         <div class="title">Bid Enrollment</div>
         <div class="subtitle">Tenders Documents</div>
-        <form action="#">
+        <form action="/f2" method="post">
             <div class="user-details">
                 <div class="input-box">
                     <label for="details">EPF Registration Document</label>
-                    <input type="file">
+                    <input type="file" name="epfDoc">
                 </div>
                 <div class="input-box">
                     <label for="details">Permanent Account Number</label>
-                    <input type="file">
+                    <input type="file" name="panDoc">
                 </div>
                 <div class="input-box">
                     <label for="details">Annual Turn Over Details </label>
-                    <input type="file">
+                    <input type="file" name="annualTurnOver">
                 </div>
                 <div class="input-box">
                     <label for="details">PRICE BID (BOQ)</label>
-                    <input type="file">
+                    <input type="file" name="boq">
+                </div>
+                <div class="input-box">
+                    <label for="details">Confirm BID Amount</label>
+                    <input type="text" name="bidAmount">
                 </div>
                 
                     <div class="button">

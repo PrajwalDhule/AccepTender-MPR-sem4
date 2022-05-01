@@ -92,72 +92,17 @@
             </div>
           </div>
           <article class="tender-part">
-            <div class="tender-content first">
+            <div class="tender-content">
+              <!-- {{#each obj}}
               <li>
-                <a href="/tenderinfo"
-                  >Upgradation and Replacement of existing lifts</a
-                >
+                <a href="{{this.link}}">{{this.title}}</a>
               </li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>25-03-2022</li>
-              <li>04-04-2025</li>
+              <li>{{this.no}}</li>
+              <li>{{this.oDate}}</li>
+              <li>{{this.cDate}}</li>
+              {{/each}} -->
             </div>
-            <div class="tender-content">
-              <li><a href="#">Restoration of primary dome of Mumbai</a></li>
-              <li>Proc.3(1)/DMK/RA/HTA/BI/07/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li>
-                <a href="#"
-                  >Maintenance of ground areas at Zerlina, Purnima, Anand Bhavan
-                  under LGR maint. unit, Mumbai</a
-                >
-              </li>
-              <li>Proc.3(1)/DMK/RABI/PSA/22/2022</li>
-              <li>05-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li><a href="#">Restoration of primary dome of Mumbai</a></li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li>
-                <a href="#">Upgradation and Replacement of existing lifts</a>
-              </li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li><a href="#">Restoration of primary dome of Mumbai</a></li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li>
-                <a href="#"
-                  >Maintenance of ground areas at Zerlina, Purnima, Anand Bhavan
-                  under LGR maint. unit, Mumbai</a
-                >
-              </li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
-            <div class="tender-content">
-              <li>
-                <a href="#">Upgradation and Replacement of existing lifts</a>
-              </li>
-              <li>Proc.3(1)/DMK/RABI/HTA/04/2022</li>
-              <li>21-03-2022</li>
-              <li>21-03-2025</li>
-            </div>
+
           </article>
         </div>
       </section>
@@ -167,29 +112,43 @@
     // document.querySelector("#Tenders").scrollIntoView({
     //   behavior: "smooth",
     // });
-    let obj = {
-      title: "Destroy TSEC building",
-      no: "Proc.4(2)/DK/ROTI/HTA/03/2022",
-      oDate: "16-05-2022",
-      cDate: "17-05-2022",
-      link: "/tenderinfo"
-    }
-    const art= document.querySelector('.tender-part');
+    let obj = [
+      {
+        title: "Destroy TSEC building",
+        no: "Proc.4(2)/DK/ROTI/HTA/03/2022",
+        oDate: "16-05-2022",
+        cDate: "17-05-2022",
+        link: "/tenderinfo"
+      },
+      {
+        title: "Destroy TSEC building",
+        no: "Proc.4(2)/DK/ROTI/HTA/03/2022",
+        oDate: "16-05-2022",
+        cDate: "17-05-2022",
+        link: "/tenderinfo"
+      }
+    ]
 
-    const div = document.createElement('div');
-    div.classList.add("tender-content");
 
-    div.innerHTML = `<li>
-                <a href="${obj.link}">${obj.title}</a>
+    obj.forEach(item => {
+      const art = document.querySelector('.tender-part');
+
+      const div = document.createElement('div');
+      div.classList.add("tender-content");
+      
+      div.innerHTML = `<li>
+              <a href="${item.link}">${item.title}</a>
               </li>
-              <li>${obj.no}</li>
-              <li>${obj.oDate}</li>
-              <li>${obj.cDate}</li>`;
-    // console.log(div);
-    // console.log(art);
+              <li>${item.no}</li>
+              <li>${item.oDate}</li>
+              <li>${item.cDate}</li>`;
+      // console.log(div);
+      // console.log(art);
 
-    art.appendChild(div);
-    art.insertBefore(div, art.firstChild);
+      art.appendChild(div);
+      art.insertBefore(div, art.firstChild);
+    });
+
 
   </script>
 </html>

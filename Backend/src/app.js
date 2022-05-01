@@ -5,6 +5,8 @@ const hbs = require("hbs");
 require("./db/conn");
 const Login = require("./models/login");
 const Register = require("./models/register");
+const Enroll = require("./models/enrollment");
+const tc = require("./models/TenderCreation");
 
 const port = process.env.PORT || 8000;
 
@@ -31,6 +33,15 @@ app.get("/contact", (req, res) => {
 });
 app.get("/f2", (req, res) => {
   res.render("f2");
+});
+app.post("/f2", async (req, res) => {
+  try {
+    const enrollDetails = new Enroll(req.body);
+    await enrollDetails.save();
+    res.status(201).send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 app.get("/LoginF", (req, res) => {
   res.render("LoginF");
@@ -93,6 +104,15 @@ app.get("/tenderinfo", (req, res) => {
 });
 app.get("/TenderCreation", (req, res) => {
   res.render("TenderCreation");
+});
+app.post("/TenderCreation", async (req, res) => {
+  try {
+    const tCreation = new tc(req.body);
+    await tCreation.save();
+    res.status(201).send(req.body);
+  } catch (error) {
+    res.status(400).send(error);
+  }
 });
 
 app.listen(port, () => {

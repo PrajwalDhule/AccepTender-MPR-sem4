@@ -11,6 +11,7 @@
   </head>
   <body>
     {{>navbar}}
+    <form action="/TenderCreation" method="post">
     <section class="sect2">
       <div class="two-container">
         <h2>Basic Details</h2>
@@ -20,15 +21,15 @@
               <p>Organisation chain</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="orgChain" class="text1" />
             </div>
           </div>
           <div class="info">
             <div class="info-title">
-              <p>Tender class</p>
+              <p>Tender ID</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="tenderClass" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -36,7 +37,7 @@
               <p>Tender Category</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="tenderCategory" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -44,7 +45,7 @@
               <p>Tender Title</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="tenderTitle" class="text1" />
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@
               <p>Start date</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="startDate" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -65,7 +66,7 @@
               <p>End Date</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="endDate" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -73,8 +74,8 @@
               <p>Documents</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
-              <input type="file" name="" class="file1" />
+              <input type="text" name="documentTitle" class="text1" />
+              <input type="file" name="document" class="file1" />
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@
               <p>Tender Description</p>
             </div>
             <div class="info-content">
-              <textarea name="" class="text2"></textarea>
+              <textarea name="tenderDescription" class="text2"></textarea>
             </div>
           </div>
           <div class="info">
@@ -97,7 +98,7 @@
               <p>Address/location</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="location" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -106,7 +107,7 @@
               <p>(in Rs)</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="maxValue" class="text1" />
             </div>
           </div>
           <div class="info">
@@ -114,7 +115,7 @@
               <p>Payment mode</p>
             </div>
             <div class="info-content">
-              <input type="text" name="" class="text1" />
+              <input type="text" name="paymentMode" class="text1" />
             </div>
           </div>
         </div>
@@ -125,5 +126,6 @@
         </button>
       </div>
     </section>
+    </form>
   </body>
 </html>
