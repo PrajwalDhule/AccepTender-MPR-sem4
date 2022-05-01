@@ -25,6 +25,14 @@
   </head>
   <body>
    {{>navbar}}
+    <section class="sect3">
+      <p>Filters:</p>
+      <ul class="filters">
+        <li class="filter-items"><a href="#">by experience</a></li>
+        <li class="filter-items"><a href="#">by cost</a></li>
+        <li class="filter-items"><a href="#">by organization</a></li>
+      </ul>
+    </section>
     <table
       id="dtOrderExample"
       class="table table-striped table-bordered table-sm"
@@ -33,10 +41,10 @@
     >
       <thead>
         <tr style="cursor: pointer">
-          <th onclick="sortTable(0);" class="th-sm">TenderID</th>
-          <th onclick="sortTable(1);" class="th-sm">Reference ID</th>
-          <th onclick="sortTable(3);" class="th-sm">Start date</th>
-          <th onclick="sortTable(4);" class="th-sm">Close date</th>
+          <th onclick="sortTable(0);" class="th-sm">Company name</th>
+          <th onclick="sortTable(1);" class="th-sm">Registration no</th>
+          <th onclick="sortTable(3);" class="th-sm">Establishment year</th>
+          <th onclick="sortTable(4);" class="th-sm">bid amount</th>
         </tr>
       </thead>
       <tbody>

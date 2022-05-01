@@ -110,6 +110,9 @@ app.get("/tenderinfo", (req, res) => {
 app.get("/TenderCreation", (req, res) => {
   res.render("TenderCreation");
 });
+app.get("/BidderList", (req, res) => {
+  res.render("BidderList");
+});
 app.post("/TenderCreation", async (req, res) => {
   try {
     const tCreation = new tc(req.body);
