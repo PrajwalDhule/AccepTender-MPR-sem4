@@ -121,7 +121,7 @@ app.post("/TenderCreation", async (req, res) => {
   }
 });
 app.get("/StaticR", async (req, res) => {
-  const Registrationdetails = await Register.find({ companyname: "Tata" });
+  const Registrationdetails = await Register.find({ companyname: "tsec2" });
   const reg = Registrationdetails[0];
 
   res.render("StaticR", { reg });
