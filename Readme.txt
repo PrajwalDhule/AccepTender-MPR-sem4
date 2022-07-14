@@ -10,7 +10,7 @@ Description of the original ps:
 
 BUILT WITH:
 
-HTML
+Handlebars(hbs)
 SCSS/CSS
 Javascript
 Node.js
