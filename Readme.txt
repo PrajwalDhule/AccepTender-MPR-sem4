@@ -21,4 +21,4 @@ MongoDB
 
 GETTING STARTED:
 1. Clone the repository
-2. From the "Main" folder, run "npm start" to run it on a localhost
+2. From the "Backend" folder, run "npm start" to run it on a localhost
