@@ -54,20 +54,6 @@ app.post("/register", async (req, res) => {
   try {
     const RegisterDetails = new Register(
       req.body
-      // companyname : req.body.companyname,
-      // registrationnumber : req.body. registrationnumber,
-      // email : req.body. email,
-      // phonenumber : req.body.phonenumber,
-      // registeredaddress : req.body. registeredaddress,
-      // city : req.body. city,
-      // state : req.body. state,
-      // dob : req.body.dob,
-      // postalcode : req.body. postalcode,
-      // contactname : req.body.contactname,
-      // establishmentyear : req.body. establishmentyear,
-      // designation : req.body. designation,
-      // password : req.body. password,
-      // confirmpassword : req.body. confirmpassword,
     );
     const registered = await RegisterDetails.save();
     res.status(201).send(req.body);
